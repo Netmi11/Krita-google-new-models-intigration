@@ -6,7 +6,9 @@
       "default": ""
     },
     "class_type": "ETN_Parameter",
-    "_meta": { "title": "Prompt" }
+    "_meta": {
+      "title": "Prompt"
+    }
   },
   "2": {
     "inputs": {
@@ -15,7 +17,9 @@
       "default": "1K\n512px\n2K\n4K"
     },
     "class_type": "ETN_Parameter",
-    "_meta": { "title": "Image Size" }
+    "_meta": {
+      "title": "Image Size"
+    }
   },
   "3": {
     "inputs": {
@@ -24,47 +28,73 @@
       "default": "1:1\n2:3\n3:2\n3:4\n4:3\n4:5\n5:4\n9:16\n16:9\n21:9\n1:4\n4:1\n1:8\n8:1"
     },
     "class_type": "ETN_Parameter",
-    "_meta": { "title": "Aspect Ratio" }
+    "_meta": {
+      "title": "Aspect Ratio"
+    }
   },
   "4": {
     "inputs": {
       "name": "4. Settings/Temperature",
       "type": "number",
-      "default": "1.0",
+      "default": 1.0,
       "min": 0.0,
       "max": 2.0
     },
     "class_type": "ETN_Parameter",
-    "_meta": { "title": "Temperature" }
+    "_meta": {
+      "title": "Temperature"
+    }
   },
   "5": {
     "inputs": {
       "name": "5. Settings/Image Count",
       "type": "number (integer)",
-      "default": "1",
-      "min": 1.0,
-      "max": 10.0
+      "default": 1,
+      "min": 1,
+      "max": 10
     },
     "class_type": "ETN_Parameter",
-    "_meta": { "title": "Image Count" }
+    "_meta": {
+      "title": "Image Count"
+    }
   },
   "6": {
     "inputs": {
       "model_name": "gemini-3.1-flash-image-preview",
-      "prompt": ["1", 0],
-      "image_count": ["5", 0],
+      "prompt": [
+        "1",
+        0
+      ],
+      "image_count": [
+        "5",
+        0
+      ],
       "use_search": false,
       "use_image_search": false,
-      "image_size": ["2", 0],
-      "aspect_ratio": ["3", 0],
-      "temperature": ["4", 0]
+      "image_size": [
+        "2",
+        0
+      ],
+      "aspect_ratio": [
+        "3",
+        0
+      ],
+      "temperature": [
+        "4",
+        0
+      ]
     },
     "class_type": "NanoBanana2AIO",
-    "_meta": { "title": "Gemini Flash Generate" }
+    "_meta": {
+      "title": "Gemini Flash Generate"
+    }
   },
   "7": {
     "inputs": {
-      "images": ["6", 0],
+      "images": [
+        "6",
+        0
+      ],
       "x": 0,
       "y": 0,
       "name": "Gemini Generate",
@@ -72,6 +102,8 @@
       "resize_canvas": true
     },
     "class_type": "ETN_KritaOutput",
-    "_meta": { "title": "Output to Krita" }
+    "_meta": {
+      "title": "Output to Krita"
+    }
   }
 }
