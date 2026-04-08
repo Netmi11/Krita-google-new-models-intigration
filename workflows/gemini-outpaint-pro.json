@@ -1,0 +1,70 @@
+{
+  "1": {
+    "inputs": {},
+    "class_type": "ETN_KritaCanvas",
+    "_meta": { "title": "Krita Canvas" }
+  },
+  "2": {
+    "inputs": {
+      "name": "1. Prompt",
+      "type": "text",
+      "default": "Extend and complete this image naturally, filling all empty or transparent areas while maintaining style and content consistency"
+    },
+    "class_type": "ETN_Parameter",
+    "_meta": { "title": "Prompt" }
+  },
+  "3": {
+    "inputs": {
+      "name": "2. Settings/Image Size",
+      "type": "choice",
+      "default": "1K\n2K\n4K"
+    },
+    "class_type": "ETN_Parameter",
+    "_meta": { "title": "Image Size" }
+  },
+  "4": {
+    "inputs": {
+      "name": "3. Settings/Temperature",
+      "type": "number",
+      "default": "0.6",
+      "min": 0.0,
+      "max": 2.0
+    },
+    "class_type": "ETN_Parameter",
+    "_meta": { "title": "Temperature" }
+  },
+  "5": {
+    "inputs": {
+      "name": "4. Settings/Use Search",
+      "type": "toggle",
+      "default": "true"
+    },
+    "class_type": "ETN_Parameter",
+    "_meta": { "title": "Use Search" }
+  },
+  "6": {
+    "inputs": {
+      "model_name": "gemini-3-pro-image-preview",
+      "prompt": ["2", 0],
+      "image_count": 1,
+      "use_search": ["5", 0],
+      "image_1": ["1", 0],
+      "image_size": ["3", 0],
+      "temperature": ["4", 0]
+    },
+    "class_type": "NanoBananaAIO",
+    "_meta": { "title": "Gemini Pro Outpaint" }
+  },
+  "7": {
+    "inputs": {
+      "images": ["6", 0],
+      "x": 0,
+      "y": 0,
+      "name": "Gemini Outpaint",
+      "batch_mode": "default",
+      "resize_canvas": false
+    },
+    "class_type": "ETN_KritaOutput",
+    "_meta": { "title": "Output to Krita" }
+  }
+}
